@@ -6,7 +6,7 @@ const connect = require("./config/db");
 const signupRoute = require("./user/signup.route");
 const loginRoute = require("./user/login.route");
 
-const PORT = process.env.PORT;
+
 
 const app = express();
 app.use(express.json());
@@ -16,7 +16,7 @@ app.use("/signup",signupRoute)
 app.use("/login",loginRoute)
 
 
-app.listen(PORT, async () => {
+app.listen(8080, async () => {
   await connect();
-  console.log(`Listening to http://localhost:${PORT}`);
+  console.log(`Listening to http://localhost:${8080}`);
 });
